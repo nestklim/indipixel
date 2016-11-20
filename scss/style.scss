@@ -5,21 +5,21 @@
     font-family: 'Montserrat';
     src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
          url('../fonts/montserrat-light-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/montserrat-semibold-webfont.woff2') format('woff2'),
          url('../fonts/montserrat-semibold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/montserrat-ultralight-webfont.woff2') format('woff2'),
          url('../fonts/montserrat-ultralight-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 200;
     font-style: normal;
 }
 body{
@@ -94,7 +94,9 @@ select {
 	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 }
 select{
-
+	background: #FFF url(../img/arrow.svg) 90% 50% no-repeat;
+	-moz-appearance: none;
+	appearance: textfield;
 }
 
 input[type="text"]:focus,
@@ -105,14 +107,23 @@ input[type="tel"]:focus,
 textarea:focus,
 select:focus {
 	border-color: #69F0AE;
-
 }
 textarea {
+	line-height: 1.3;
+	min-height: 100px;
+	padding-top: 15px;
+	resize: vertical;
+}
 
+main{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 .ba-indipixel{
 	padding-top: 22px;
-}
+	flex: 1;
+ }
 .ba-header{
 	background: #E94643;
 	color: #fff;
@@ -197,7 +208,7 @@ textarea {
 		line-height: 1.2;
 		text-transform: uppercase;
 		margin: 0;
-		// font-weight: 400;
+		font-weight: 400;
 	}
 	p{
 		color:  #f9fbe8;
@@ -254,15 +265,10 @@ textarea {
 		line-height: 45px;
 		border-radius: 8px;
 		padding: 0 32px;
-		margin-top: 14px;
+		margin-top: 10px;
 		&:hover{
 			background: #04E4A2;
 		}
-	}
-	select{
-		appearance: textfield;
-		background: #FFF url(../img/arrow.svg) 90% 50% no-repeat;
-		-moz-appearance: none;
 	}
 }
 .ba-footer{
@@ -275,6 +281,7 @@ textarea {
 	a{
 		color: #626262;
 		display: inline-block;
+		flex-direction: row;
 		svg{
 			vertical-align: middle;
 			margin-right: 20px;
